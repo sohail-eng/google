@@ -9,24 +9,150 @@
 </head>
 <body class="bod">
     <section>
+        <div class="contact">
+            sohailamjad865@gmail.com
+        </div>
         <div class="webname">
             Software Point
         </div>
     </section>
+    
+    <table class="tbsearch">
+        <tr>
+            <td class="searchtxtalign">
+                <input type="text" id="searchtext" class="searchtxt" placeholder="Search Here . . .">
+            </td>
+            <td class="searchbtalign">
+                <button class="btn" id="searchbutton">
+                    Search
+                </button>
+            </td>
+        </tr>
+    </table>
+
     <section>
-        <table>
-            <tr>
-                <td class="tdd">
-                    <input type=button class="btn" onClick=" parent.location='profile.zip'" 
-                    value='My Profile Image'>
-                </td>
-            </tr>
-            <tr>
-                <td class="tdd">
-                    
-                </td>
-            </tr>
-        </table>
+        <div id="tabledata">
+            
+        </div>
     </section>
+    <script>
+
+        var searchbutton=document.getElementById("searchbutton");
+        var searchtext=document.getElementById("searchtext");
+        
+        var out='new';
+        const nam=[];
+        const lin=[];
+        const des=[];
+        const img=[];
+
+
+        nam[0]="My Profile Picture";
+        lin[0]="profile.zip";
+        des[0]="hello World";
+        img[0]="profile.png";
+
+        nam[1]="Dev C++";
+        lin[1]='Dev C++ old.zip';
+        des[1]="Dev-C++ is a free full-featured integrated development environment distributed under the GNU General Public License for programming in C and C++. It was originally developed by Colin Laplace and first released in 1998.";
+        
+        img[1]="dev.png";
+
+
+
+        out='<table class="tb">';
+        for(var i=0;i<nam.length;i++)
+        {
+            out+='<tr>';
+
+                out+='<td class="tddes">';
+                out+=des[i];
+                out+='</td>';
+
+                
+
+                out+='<td class="tdbt">';
+
+                out+='<div class="title">';
+                out+=nam[i];
+                out+='</div>';
+
+                out+='<input type=button class="btn" onClick=" parent.location=\'softwares/';
+                out+=lin[i];
+                out+='\'"';
+                out+='value="';
+                out+="Download ⏬";
+                out+='">';
+
+                
+                
+                
+                out+='</td>';
+                out+='<td class="tdimg">';
+                out+='<img class="imgclass" src="images/';
+                out+=img[i];
+                out+='">';
+                
+                out+='</td>';
+                
+
+            out+='</tr>';
+        }
+        out+="</table>"
+        document.getElementById("tabledata").innerHTML=out;
+
+        
+
+        searchbutton.onclick=function(){
+            
+            
+            out='<table class="tb">';
+            for(var i=0;i<nam.length;i++)
+            {
+                if(nam[i].toLowerCase().includes(searchtext.value.toLowerCase()))
+                {
+                    out+='<tr>';
+
+                    out+='<td class="tddes">';
+                    out+=des[i];
+                    out+='</td>';
+
+
+
+                    out+='<td class="tdbt">';
+
+                    out+='<div class="title">';
+                    out+=nam[i];
+                    out+='</div>';
+
+                    out+='<input type=button class="btn" onClick=" parent.location=\'';
+                    out+=lin[i];
+                    out+='\'"';
+                    out+='value="';
+                    out+="Download ⏬";
+                    out+='">';
+
+
+
+
+                    out+='</td>';
+                    out+='<td class="tdimg">';
+                    out+='<img class="imgclass" src="images/';
+                    out+=img[i];
+                    out+='">';
+
+                    out+='</td>';
+
+
+                    out+='</tr>';
+                }
+            }
+            out+="</table>"
+            document.getElementById("tabledata").innerHTML=out;
+        }
+        
+        
+
+    </script>
 </body>
 </html>

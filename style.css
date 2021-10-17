@@ -3,38 +3,99 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
-    font-size: 28px;
+    color: black;
 
+}
+.contact{
+    margin-top: 2%;
+    text-align: center;
 }
 .webname{
     text-align: center;
-    margin: 30px;
+    margin-top: 5px;
+    margin-bottom: 15px;
     font-size: 72px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: turquoise;
     lighting-color:turquoise;
 }
 .bod{
-    background-color: yellow;
+    background-color: whitesmoke;
     background-size: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     
 }
-table{
+
+.tbsearch{
+    width: 100%;
+}
+
+.searchtxtalign{
+    text-align: right;
+    width: 70%;
+}
+.searchtxt{
+    width: 50%;
+    min-width: 200px;
+    text-align: left;
+    padding: 1%;
+    margin:2%;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    font-size: 18px;
+}
+.searchbtalign{
+    text-align: left;
+    width: 30%;
+}
+
+.tb{
     height:fit-content;
     width: 100%;
-    border: 1px solid black;
     border-collapse: collapse;
     
 }
 
-.tdd{
-    border: 1px solid black;
+.tdbt{
     padding: 2%;
     color:rgb(55, 0, 255);
     text-align: center;
+    font-size: 10px;
+}
 
+.tddes{
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 1px;
+    text-align: center;
+    width: 60%;
+    font-size: 20px;
+    font-display:inherit;
+}
+
+.tddes:hover{
+    font-size: 40px;
+}
+
+.tdimg{
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    width: 20%;
+    height: 20%;
+    
+}
+.imgclass{
+    width: 100%;
+}
+.imgclass:hover{
+    transition-duration: 0.7s;
+    transform:scale(2,2);
+    -webkit-transform:scale(2,2);
+    -moz-transform:scale(2,2);
+    padding-right: 20%;
 }
 
 .btn{
@@ -44,8 +105,13 @@ table{
 .btn:hover
 {
     transition-duration: 0.7s;
-    transform:scale(1.3,1.3);
-    -webkit-transform:scale(1.3,1.3);
-    -moz-transform:scale(1.3,1.3);
+    transform:scale(1.5,1.5);
+    -webkit-transform:scale(1.5,1.5);
+    -moz-transform:scale(1.5,1.5);
     background-color: blueviolet;
+}
+.title{
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: black;
 }
